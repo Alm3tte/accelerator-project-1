@@ -1,0 +1,44 @@
+@mixin container {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media screen and (min-width: $tablet) {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-left: 103px;
+    padding-right: 103px;
+    margin: 0 auto;
+  }
+}
+
+@mixin width {
+  min-width: 320px;
+}
+
+@mixin list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+@mixin margins {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin footer {
+  font-family: $roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-white;
+  list-style: none;
+
+  @media screen and (min-width: $tablet) {
+    line-height: 22px;
+  }
+}

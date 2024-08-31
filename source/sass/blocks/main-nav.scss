@@ -1,0 +1,69 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+    line-height: 24px;
+    padding-top: 31px;
+    padding-bottom: 27px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+    line-height: 26px;
+    padding-top: 30px;
+    padding-bottom: 28px;
+    max-width: 1366px;
+    margin: 0 auto;
+  }
+}
+
+.main-nav__phone {
+  color: $color-white;
+  text-decoration: none;
+  align-self: flex-start;
+
+  @media screen and (min-width: $desktop) {
+    align-self: auto;
+  }
+
+  &:hover {
+    color: $color-blue-secondary;
+    opacity: 0.5;
+  }
+
+  &:focus {
+    color: $color-blue-secondary;
+  }
+
+  &:active {
+    color: $color-basic;
+    text-decoration: underline;
+  }
+
+  &:disabled {
+    color: $color-white-secondary;
+  }
+}
+
+.main-nav__logo {
+  width: 100px;
+  height: 20px;
+
+  @media screen and (min-width: $tablet) {
+    width: 110px;
+    height: 22px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 130px;
+    height: 26px;
+  }
+}

@@ -1,0 +1,199 @@
+.accordion {
+  display: none;
+  position: relative;
+
+  &--activ {
+    display: block;
+    position: relative;
+  }
+}
+
+.accordion__item {
+  border-bottom: 1px solid $gray-link;
+  padding-bottom: 20px;
+  display: grid;
+  gap: 20px;
+  padding-top: 20px;
+
+  &:first-child {
+    border-top: 1px solid $gray-link;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 33px;
+    padding-bottom: 31px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    gap: 31px;
+    padding-top: 31px;
+    padding-bottom: 30px;
+  }
+
+  &--activ {
+    @media screen and (min-width: $tablet) {
+      padding-top: 32px;
+      padding-bottom: 22px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 31px;
+      padding-bottom: 22px;
+      margin-top: -1px;
+    }
+  }
+
+  &:last-child {
+    @media screen and (min-width: $tablet) {
+      padding-top: 24px;
+      padding-bottom: 22px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 31px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.accordion__hidden p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+  text-wrap: balance;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 24px;
+    width: 550px;
+    text-wrap: wrap;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 658px;
+  }
+}
+
+.accordion__visible h3 {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  margin: 0;
+  width: 238px;
+  text-wrap: pretty;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 22px;
+    line-height: 22px;
+    width: 500px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 24px;
+    line-height: 24px;
+    width: auto;
+  }
+}
+
+.accordion__visible {
+  position: relative;
+}
+
+.accordion__hidden {
+  overflow: hidden;
+  display: none;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.accordion__button {
+  position: absolute;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 15px, 8px;
+  border: 1px solid $color-blue-secondary;
+  background-color: transparent;
+  transform: translateY(-50%);
+  right: 0;
+  top: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $color-blue-secondary;
+    left: 50%;
+    top: 7px;
+    height: 14px;
+    width: 1px;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $color-blue-secondary;
+    left: 7px;
+    height: 1px;
+    width: 14px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 40px;
+    height: 40px;
+    padding: 9px;
+
+    &::before {
+      top: 9px;
+      height: 20px;
+    }
+
+    &::after {
+      left: 9px;
+      width: 20px;
+    }
+  }
+}
+
+.accordion__button--activ {
+  background-color: $color-blue-secondary;
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    background-color: $color-white;
+  }
+}
+
+.accordion__button:hover {
+  background-color: $color-blue-secondary;
+
+  &::after,
+  &::before {
+    background-color: $color-white;
+  }
+}
+
+.accordion__button:focus {
+  background-color: $gray-link;
+
+  &::after,
+  &::before {
+    background-color: $color-white;
+  }
+}
+
+.accordion__button:disabled {
+  opacity: 0.3;
+  background-color: $color-blue-secondary;
+
+  &::after,
+  &::before {
+    background-color: $color-blue-secondary;
+    opacity: 0.3;
+  }
+}

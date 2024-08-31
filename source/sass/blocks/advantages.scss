@@ -1,0 +1,29 @@
+.advantages {
+  @include width;
+
+  background-color: $color-white-secondary;
+}
+
+.advantages__wrapper {
+  padding: 41px 0 40px;
+  max-width: $desktop;
+  margin: 0 auto;
+
+  @media screen and (min-width: $tablet) {
+    padding: 61px 45px 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 100px 102px;
+  }
+}
+
+.advantages__list {
+  @include margins;
+
+  list-style: none;
+}
+
+.advantages__title {
+  margin: 0;
+}

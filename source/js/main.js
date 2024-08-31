@@ -1,4 +1,9 @@
 // https://swiperjs.com/get-started#installation
-// import Swiper from "swiper";
-// import {Navigation, Pagination} from "swiper/modules";
-// import 'swiper/css';
+import'./swiper-review.js';
+import'./swiper-juri.js';
+import'./season-ticket.js';
+import'./accordion.js';
+import'./form.js';
+import'./video.js';
+import'./scroll.js';
+import'./form-validation.js';

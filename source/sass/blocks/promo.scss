@@ -1,0 +1,43 @@
+.promo {
+  @include width;
+}
+
+.promo__wrapper {
+  display: grid;
+  padding-bottom: 39px;
+
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 59px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 0;
+  }
+}
+
+.promo__contacts {
+  @include container;
+
+  padding-top: 10px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    border-top: 1px solid $color-line;
+    width: 100%;
+    padding-top: 59px;
+  }
+}
+
+.promo__form {
+  @include container;
+
+  background-color: $color-basic;
+
+  @media screen and (min-width: $tablet) {
+    margin: 0;
+  }
+}

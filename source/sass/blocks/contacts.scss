@@ -1,0 +1,31 @@
+.contacts__title {
+  text-align: left;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 600;
+
+  @media screen and (min-width: $tablet) {
+    text-align: center;
+    font-size: 54px;
+    line-height: 54px;
+    margin: 0;
+    margin-bottom: 36px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+  }
+}
+
+.contacts__list {
+  @include margins;
+
+  list-style: none;
+}
+
+.contacts__content {
+  @media screen and (min-width: $desktop) {
+    max-width: 477px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,129 @@
+.faq {
+  @include width;
+  @include container;
+
+  background-color: $color-white-secondary;
+  padding-top: 45px;
+  padding-bottom: 70px;
+
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 100px;
+  }
+}
+
+.faq__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media screen and (min-width: $tablet) {
+    gap: 28px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 260px auto;
+    gap: 49px 40px;
+    max-width: 1366px;
+    margin: 0 auto;
+  }
+}
+
+.faq__button-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  grid-auto-rows: min-content;
+
+  @media screen and (min-width: $tablet) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media screen and (min-width: $desktop) {
+    grid-template-columns: 100%;
+    grid-column: 1 / 2;
+  }
+}
+
+.faq__content {
+  margin-top: 25px;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 17px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    grid-column: 2 / 3;
+    margin-top: 0;
+  }
+}
+
+.faq__list {
+  @include margins;
+
+  list-style: none;
+}
+
+.faq__button {
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  font-family: $roboto;
+  border: 1px solid $faq-button;
+  background-color: inherit;
+  color: $color-basic;
+  cursor: pointer;
+  height: 46px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 18px;
+    height: 54px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 10px 0 6px;
+  }
+
+  &--activ,
+  &:active {
+    color: $color-white;
+    background-image: linear-gradient(97deg, $color-baners 17.6%, $color-baners2 95.31%);
+    border: none;
+  }
+
+  &:hover {
+    border-color: $color-basic;
+  }
+
+  &:focus {
+    border-color: transparent;
+    outline: 1px solid $color-basic;
+    outline-offset: -1px;
+  }
+
+  &:disabled {
+    color: #c8c9cc;
+    background: transparent;
+    border: 1px solid rgba(16, 38, 84, 0.2);
+  }
+}
+
+.faq__title {
+  margin: 26px 0 34px;
+
+  @media screen and (min-width: $tablet) {
+    margin: 16px 0 44px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+    padding: 55px 0 50px;
+    max-width: 1366px;
+    margin: 0 auto;
+  }
+}

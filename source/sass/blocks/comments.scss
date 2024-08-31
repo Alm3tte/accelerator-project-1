@@ -1,0 +1,91 @@
+.comments {
+  @include margins;
+
+  color: $color-white;
+  text-align: center;
+  list-style: none;
+
+  @media screen and (min-width: $tablet) {
+    text-align: left;
+  }
+}
+
+.comments__wrapper {
+  background-color: $color-blue-secondary;
+  padding: 30px 25px 29px;
+  box-shadow: 0 0 40px $review-shadow;
+
+  @media screen and (min-width: $tablet) {
+    padding: 40px 30px;
+    max-width: 500px;
+    min-height: 242px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 80px auto;
+    grid-template-rows: auto auto;
+    column-gap: 40px;
+    row-gap: 20px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 560px;
+    min-height: 258px;
+    padding: 60px;
+    column-gap: 30px;
+    row-gap: 20px;
+  }
+}
+
+.comments h3 {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  margin: 0 auto 17px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 22px;
+    line-height: 22px;
+    margin: 0;
+  }
+}
+
+.comments p {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 300;
+  margin: 0;
+  text-wrap: pretty;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 24px;
+    text-wrap: wrap;
+  }
+
+  @media screen and (min-width: $desktop) {
+    text-wrap: balance;
+  }
+}
+
+.comments__picture {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 10px;
+
+  @media screen and (min-width: $tablet) {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+  }
+}
+
+.comments__image {
+  border-radius: 50%;
+  display: block;
+  width: 68px;
+  height: 68px;
+
+  @media screen and (min-width: $tablet) {
+    width: 80px;
+    height: 80px;
+  }
+}

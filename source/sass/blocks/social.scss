@@ -1,0 +1,47 @@
+.social {
+  @include list;
+
+  column-gap: 20px;
+
+  @media screen and (min-width: $tablet) {
+    width: 105px;
+    column-gap: 0;
+    align-self: flex-start;
+  }
+
+  @media screen and (min-width: $desktop) {
+    column-gap: 10px;
+    width: 95px;
+  }
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: $color-white;
+  color: $color-black;
+
+  &:hover {
+    color: $color-white;
+    background-color: $gray-link;
+  }
+
+  &:focus {
+    outline: none;
+    color: $color-white;
+    background-color: $color-blue;
+  }
+
+  &:active {
+    background-color: $color-basic;
+  }
+
+  &:disabled {
+    color: $color-black;
+    background-color: rgba($color-white, 0.3);
+  }
+}

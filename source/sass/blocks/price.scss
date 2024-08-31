@@ -1,0 +1,57 @@
+.price {
+  position: relative;
+  padding-top: 47px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 62px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 59px;
+  }
+}
+
+.price__currency {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 72px;
+  color: $color-blue;
+  display: block;
+  z-index: 1;
+  position: relative;
+
+  &::before {
+    content: attr(data-period);
+    position: absolute;
+    top: -48px;
+    left: -15px;
+    font-size: 80px;
+    line-height: 120px;
+    color: $shadow;
+    opacity: 0.48;
+    z-index: -1;
+    overflow-wrap: break-word;
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 90px;
+
+    &::before {
+      font-size: 100px;
+      line-height: 150px;
+      top: -62px;
+      left: -19px;
+    }
+  }
+}
+
+.price__item {
+  width: 24px;
+  height: 33px;
+
+  @media screen and (min-width: $tablet) {
+    width: 30px;
+    height: 42px;
+  }
+}

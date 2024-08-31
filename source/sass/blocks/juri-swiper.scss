@@ -1,0 +1,65 @@
+.juri-swiper {
+  @include margins;
+
+  list-style: none;
+}
+
+.juri-swiper__item {
+  max-width: 260px;
+  cursor: pointer;
+}
+
+.juri-swiper__item:focus .card-back {
+  display: block;
+  outline: none;
+}
+
+.juri-swiper__item:focus .juri-swiper__name {
+  top: 25px;
+
+  @media screen and (min-width: $tablet) {
+    top: 45px;
+  }
+}
+
+.juri-swiper__img-wrapper {
+  height: 300px;
+
+  @media screen and (min-width: $tablet) {
+    height: 300px;
+  }
+}
+
+.juri-swiper__img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.juri-swiper__name {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+  color: $color-white;
+  margin: 0;
+  z-index: 10;
+}
+
+.juri-swiper__reverse {
+  width: 260px;
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 260px;
+  }
+}

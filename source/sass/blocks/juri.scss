@@ -1,0 +1,107 @@
+.juri {
+  @include width;
+
+  padding: 41px 0;
+
+  @media screen and (min-width: $tablet) {
+    padding: 30px 25px 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 100px 0;
+  }
+}
+
+.juri__global-wrapper {
+  position: relative;
+  margin: 0 auto;
+
+  @media screen and (min-width: $desktop) {
+    max-width: 1360px;
+  }
+}
+
+.juri__title {
+  margin: 0;
+  margin-bottom: 19px;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 54px;
+    line-height: 54px;
+    margin-bottom: 46px;
+  }
+}
+
+.juri__button {
+  position: absolute;
+  display: none;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  text-align: center;
+  padding: 11px 19px;
+  box-sizing: border-box;
+  z-index: 10;
+  cursor: pointer;
+
+  &--prev {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+  }
+
+  &:hover {
+    border-color: $color-basic;
+  }
+
+  &:focus {
+    background-color: #f8f8f8;
+    border-color: $color-basic;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $color-basic;
+    border-color: $color-basic;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.swiper-button-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.juri__button:active .juri__icon {
+  color: $color-white;
+}
+
+.juri__icon {
+  color: $color-basic;
+}
+
+.juri__button--prev .juri__icon {
+  transform: rotate(180deg);
+}
+
+.juri__swiper-container {
+  max-width: 260px;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 78%;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 1160px;
+  }
+}

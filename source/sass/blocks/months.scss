@@ -1,0 +1,65 @@
+.months {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  border-bottom: 2px solid $numbers;
+
+  @media screen and (min-width: $tablet) {
+    margin: 0 auto;
+    width: 310px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 350px;
+  }
+}
+
+.months__button {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  font-style: $roboto;
+  color: $color-basic;
+  border: none;
+  background-color: transparent;
+  opacity: 0.5;
+  padding: 0;
+  padding-bottom: 7px;
+  margin-bottom: -2px;
+  cursor: pointer;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 18px;
+    padding-bottom: 6px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 20px;
+    padding-bottom: 8px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+    border-bottom: 2px solid $hover-button;
+  }
+
+  &:focus {
+    opacity: 1;
+    outline: none;
+    border-bottom: 2px solid $color-dark-red;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    border-bottom: 2px solid $color-basic;
+  }
+
+  &--activ,
+  &:active {
+    border-bottom: 2px solid $color-dark-red;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,125 @@
+.season-ticket {
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  gap: 34px;
+
+  @media screen and (min-width: $tablet) {
+    gap: 40px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 0;
+  }
+
+  &--activ {
+    display: flex;
+  }
+}
+
+.season-ticket__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 44px 35px;
+  background-color: $color-white;
+  border: 7px solid transparent;
+  z-index: 2;
+  margin: 0 auto;
+
+  @media screen and (min-width: $tablet) {
+    gap: 22px;
+    padding: 58px;
+    width: 380px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    gap: 18px;
+    width: 360px;
+    margin: 0;
+  }
+}
+
+.season-ticket__item:hover,
+.season-ticket__item:focus {
+  border-image: linear-gradient($color-dark-red, $border-color) 1;
+}
+
+.season-ticket__item:hover .season-ticket__button {
+  background: linear-gradient(to right, $color-baners, $color-baners2);
+  color: $color-white;
+  border: none;
+}
+
+.season-ticket__item:focus .season-ticket__button {
+  background: linear-gradient(to right, $color-baners, $color-baners2);
+  color: $color-white;
+  border: 2px solid $dark-black;
+  opacity: 0.8;
+}
+
+.season-ticket__title {
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 700;
+  margin: 0;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+    line-height: 26px;
+  }
+}
+
+.season-ticket__span {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 300;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+  }
+}
+
+.season-ticket__button {
+  border-color: $color-basic;
+  color: $color-basic;
+  min-height: 66px;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  min-width: 206px;
+  cursor: pointer;
+  justify-content: center;
+  transition: background-color 0.3s, border-color 0.3s;
+  text-decoration: none;
+
+  &:focus {
+    outline: none;
+    border: 2px solid $dark-black;
+    color: $color-white;
+    background: linear-gradient(to right, $color-baners, $color-baners2);
+    opacity: 0.8;
+  }
+
+  &:active {
+    outline: none;
+    border: none;
+    color: rgba($color-white, 0.6);
+    background: linear-gradient(to right, $color-baners, $color-baners2);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}

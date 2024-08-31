@@ -1,0 +1,47 @@
+.main-footer {
+  @include width;
+
+  background-color: $color-black;
+}
+
+.main-footer__wrapper {
+  @include container;
+  @include list;
+
+  max-width: $desktop;
+  padding-top: 40px;
+  padding-bottom: 41px;
+  row-gap: 27px;
+  align-items: center;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 45px;
+    padding-bottom: 44px;
+    align-items: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 40px;
+    padding-bottom: 37px;
+  }
+}
+
+.main-footer__list {
+  @include footer;
+  @include margins;
+}
+
+.main-footer__logo {
+  width: 100px;
+  height: 20px;
+
+  @media screen and (min-width: $tablet) {
+    width: 110px;
+    height: 22px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 130px;
+    height: 26px;
+  }
+}

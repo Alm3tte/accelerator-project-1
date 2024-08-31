@@ -1,0 +1,210 @@
+// чтобы пройти автотесты, применяются отклонения в 1px
+.privilege {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 35px;
+  flex-direction: column;
+  padding-top: 40px;
+
+
+  @media screen and (min-width: $tablet) {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    column-gap: 30px;
+    row-gap: 40px;
+    padding-top: 49px;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row;
+  }
+
+  @media screen and (min-width: $desktop) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min-content min-content;
+    column-gap: 40px;
+    row-gap: 80px;
+    padding-top: 51px;
+  }
+}
+
+.privilege__item {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    column-gap: 15px;
+    text-align: left;
+    padding: 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    position: relative;
+    column-gap: 44px;
+  }
+
+  &--dark {
+    padding: 30px 80px 40px;
+    color: $color-white;
+    background-color: $color-blue-secondary;
+    height: 225px;
+    margin: 3px 0 0;
+
+    @media screen and (min-width: $tablet) {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+      width: 320px;
+      margin: 0 auto;
+      padding: 35px 70px;
+      text-align: center;
+      flex-direction: column;
+      height: 262px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      grid-column: 2 / -2;
+      grid-row: 1 / -1;
+      height: 300px;
+      width: 100%;
+      padding: 58px 40px;
+      justify-content: space-between;
+    }
+  }
+
+  &:nth-child(4n) {
+    @media (width <= $mobile) {
+      margin-top: 5px;
+    }
+  }
+
+  &--light::after {
+    @media screen and (min-width: $desktop) {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -41px;
+      height: 2px;
+      background-color: $privilege-line;
+    }
+  }
+
+  &--light:first-child::after,
+  &--light:nth-child(2)::after {
+    content: none;
+  }
+
+  &--light:nth-child(3n + 2) {
+    @media screen and (min-width: $desktop) {
+      grid-column: 3 / 4;
+      gap: 79px;
+      margin-left: -1px;
+    }
+  }
+
+  &--light:last-child {
+    @media screen and (min-width: $desktop) {
+      gap: 80px;
+    }
+  }
+}
+
+.privilege__item h3 {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  margin: 11px 0 13px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 20px;
+    margin: 0 0 12px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 22px;
+    line-height: 22px;
+    margin: 1px 0 7px;
+  }
+}
+
+.privilege__item p {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 300;
+  margin: 0;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.privilege__item span {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $privilege-text;
+
+  @media screen and (min-width: $tablet) {
+    line-height: 22px;
+  }
+
+  &:first-child {
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 700;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 70px;
+      line-height: 70px;
+      margin: 0;
+    }
+  }
+}
+
+.privilege__item--light span:first-child {
+  background-image: linear-gradient(128deg, $color-dark-red 0%, $gradient-number 45.58%);
+  background-clip: text;
+  color: transparent;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+
+  @media screen and (min-width: $tablet) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+}
+
+.privilege__item--dark span:first-child {
+  color: $color-white;
+  background-image: none;
+}
+
+.privilege__item--dark h3 {
+  font-size: 22px;
+  line-height: 22px;
+  margin: 6px 0 21px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+    line-height: 24px;
+    margin: 25px 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+    line-height: 26px;
+    margin: 9px 0 29px;
+  }
+}
+
+.privilege__item--light div:first-child {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    margin-left: 1px;
+  }
+}
